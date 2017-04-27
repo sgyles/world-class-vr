@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.5.0/aframe.js"></script>
+    </head>
+    <body>
+        <a-scene>
+          <!-- Player -->
+          <a-entity camera
+                    look-controls
+                    position="0 1.764 0">
+            <a-entity cursor raycaster="far: 75"
+                      position="0 0 -1"
+                      geometry="primitive: circle; radius: 0.01; segments: 4;"
+                      material="color: #FF4444; shader: flat"></a-entity>
+          </a-entity>
+    
+          <!-- Terrain -->
+          <a-box width="75" height="0.1" depth="75" color="#FFAAAA" static-body></a-box>
+    
+          <!-- Lighting -->
+          <a-light type="ambient" color="#bbb"></a-light>
+          <a-light color="#ccc" position="0 30 0" distance="100" intensity="0.4" type="point"></a-light>
+          <a-light color="#ccc" position="3 10 -10" distance="50" intensity="0.4" type="point"></a-light>
+        </a-scene>
+    </body>
+</html>
